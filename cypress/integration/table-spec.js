@@ -3,7 +3,7 @@ const neatCSV = require('neat-csv')
 
 describe('CSV', () => {
     it('has table rows for each row of CSV file', () => {
-        cy.visit('http://localhost:3000/')
+        cy.visit(`${Cypress.config().baseUrl}`)
         cy.readFile('todos.csv')
             .then(neatCSV) // converts text into list of objects
             /* eslint-disable-next-line no-console */

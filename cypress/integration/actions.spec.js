@@ -2,8 +2,7 @@
 
 context("Actions", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
-  });
+    cy.visit(`${Cypress.config().baseUrl}`)
 
   // https://on.cypress.io/interacting-with-elements
 
@@ -64,7 +63,7 @@ context("Actions", () => {
   });
 
   /**
-   * Test case to makr a todo complete-04
+   * Test case to mark a todo complete-04
    */
 
   it('should allow me to mark a todo as completed', function () {
